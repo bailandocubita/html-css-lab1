@@ -32,6 +32,7 @@ h1 {
 }
 
 p {
+    /* creates the border on the left and creates some space between the border and the text */
     border-left: 2px solid #000;
     padding-left: 10px;
 }
@@ -42,4 +43,11 @@ button {
     color: #fff;
     border-radius: 12px;
     width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    /* nav {display: flex; flex-direction: row; float: right;} */
+    /* separating the company name from the other menu items by classes made it work! */
+    .title {display: flex; flex-direction: row; float: left;}
+    .menu {display: flex; flex-direction: row; float: right;}
 }
