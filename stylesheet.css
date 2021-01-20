@@ -51,6 +51,6 @@ button {
     .title {display: flex; flex-direction: row; float: left;}
     .menu {display: flex; flex-direction: row; float: right;}
     .hire {position: absolute; top: -0; right: -0; width: auto;}
-    .scroll {width: auto;}
+    .scroll {position: absolute; top: 600px; left: 45%; width: 100px;}
     h1 {padding-top: 160px;}
 }
