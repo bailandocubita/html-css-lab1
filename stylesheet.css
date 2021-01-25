@@ -4,7 +4,7 @@ body {
     color: #69696a;
 }
 
-.title {
+#title {
     color: #000;
     font-weight: bold;
 }
@@ -52,12 +52,25 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-    ul {display: flex; flex-direction: row;}
+    /* as of right now I can only get the justify-content properties to work in the parent.
+    Which means that the title won't stay to the left since it's part of any parent! :( */ 
+    header {
+        display: flex; 
+        align-items: center; 
+        /* justify-content: flex-end; */
+    }
+    nav {
+        flex-direction: row; 
+        justify-content: flex-end;
+    }
     /*separating the company name from the other menu items by classes made it work originally, but now it's not! */
-    li {display: flex;}
-    .title {align-self: flex-start;}
-    .menu {justify-content: flex-end;}
+    #title {justify-content: flex-start;}
+    .menu {
+        display: flex; 
+        justify-content: flex-end; 
+        margin: 0;
+    }
     .hire {display: flex; flex-direction: row; align-items: center; width: 80px;}
-    .scroll {width: auto;}
+    .scroll {display: flex; justify-content: center; width: 100px;}
     h1 {padding-top: 160px;}
 }
