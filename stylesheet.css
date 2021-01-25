@@ -27,6 +27,11 @@ a:active {
     text-decoration: none;
 }
 
+ul {
+    padding-left: 5px;
+    list-style-type: none;
+}
+
 h1 {
     color: #000;
 }
@@ -41,17 +46,18 @@ button {
     background-color: #000;
     font-family: "Open Sans", sans-serif;
     color: #fff;
-    border-radius: 12px;
+    border-radius: 15px;
     width: 100%;
+    padding: 5px;
 }
 
-/* @media screen and (min-width: 768px) { */
-    /* nav {display: flex; flex-direction: row; float: right;} */
-    /* separating the company name from the other menu items by classes made it work! 
-    But I'm not sure if the below code counts as using "flex properties to separate company name and nav items" */
-    /* .title {display: flex; flex-direction: row; float: left;} */
-    /* .menu {display: flex; flex-direction: row; float: right;} */
-    /* .hire {position: absolute; top: -0; right: -0; width: auto;} */
-    /* .scroll {width: auto;} */
-    /* h1 {padding-top: 160px;} */
-/* } */
+@media screen and (min-width: 768px) {
+    ul {display: flex; flex-direction: row;}
+    /*separating the company name from the other menu items by classes made it work originally, but now it's not! */
+    li {display: flex;}
+    .title {align-self: flex-start;}
+    .menu {justify-content: flex-end;}
+    .hire {display: flex; flex-direction: row; align-items: center; width: 80px;}
+    .scroll {width: auto;}
+    h1 {padding-top: 160px;}
+}
