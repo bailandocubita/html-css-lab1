@@ -60,6 +60,7 @@ button {
 @media screen and (min-width: 768px) {
     /* as of right now I can only get the justify-content properties to work in the parent.
     Which means that the title won't stay to the left since it's part of any parent! :( */ 
+    
     header {
         display: flex; 
         align-items: center; 
@@ -93,13 +94,23 @@ button {
         width: 80px;
         padding-right: 10px;
     }
+
+    footer {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        align-items: baseline;
+        justify-content: center;
+    }
     .bottom {
         display: flex;
         justify-content: center;
-        align-items: baseline;
+        /* align-items: baseline; */
     }
     .bottom button {
         width: 100px;
+        /* align-items: baseline; */
     }
     h1 {
         padding-top: 160px;
